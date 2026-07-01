@@ -73,28 +73,22 @@ document.getElementById("bmiForm").addEventListener("submit", function(e) {
     });
 });
 
-// Reset button with safety check
 const resetBtn = document.getElementById("resetBtn");
 if (resetBtn) {
     resetBtn.addEventListener("click", function() {
-        // Reset form
         document.getElementById("bmiForm").reset();
-        
-        // Hide result card
+
         document.getElementById("resultCard").classList.add("hidden");
-        
-        // Clear result card background
+
         document.getElementById("resultCard").style.backgroundColor = "";
-        
-        // Clear all result text content
+
         document.getElementById("resultName").textContent = "";
         document.getElementById("resultBMI").textContent = "";
         document.getElementById("resultCategory").textContent = "";
         document.getElementById("resultMessage").textContent = "";
         
         console.log("Form has been reset");
-        
-        // Focus on name field
+
         document.getElementById("name").focus();
     });
 } else {
