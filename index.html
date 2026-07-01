@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Self-Check Kiosk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Health Self-Check Kiosk</h1>
+        <h1><i class="fas fa-heartbeat" style="margin-right: 0.5rem; opacity: 0.9;"></i> Health Self-Check</h1>
         <p>Calculate your Body Mass Index (BMI) and receive a wellness recommendation.</p>
     </header>
 
@@ -17,17 +21,17 @@
         <section class="card">
             <form id="bmiForm">
                 <div class="form-group">
-                    <label for="name">Full Name</label>
+                    <label for="name"><i class="fas fa-user"></i> Full Name</label>
                     <input type="text" id="name" placeholder="Enter your full name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="age">Age</label>
+                    <label for="age"><i class="fas fa-calendar-alt"></i> Age</label>
                     <input type="number" id="age" min="1" max="120" placeholder="Enter your age" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="sex">Sex</label>
+                    <label for="sex"><i class="fas fa-venus-mars"></i> Sex</label>
                     <select id="sex" required>
                         <option value="">Select</option>
                         <option value="Male">Male</option>
@@ -36,24 +40,24 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="weight">Weight (kg)</label>
+                    <label for="weight"><i class="fas fa-weight-scale"></i> Weight (kg)</label>
                     <input type="number" id="weight" min="1" step="0.1" placeholder="Enter your weight" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="height">Height (cm)</label>
+                    <label for="height"><i class="fas fa-ruler-vertical"></i> Height (cm)</label>
                     <input type="number" id="height" min="1" step="0.1" placeholder="Enter your height" required>
                 </div>
 
                 <div class="button-row">
-                    <button type="submit" class="btn-submit">Check My BMI</button>
-                    <button type="button" class="btn-reset" id="resetBtn">Reset</button>
+                    <button type="submit" class="btn-submit"><i class="fas fa-calculator"></i> Check My BMI</button>
+                    <button type="button" class="btn-reset" id="resetBtn"><i class="fas fa-undo-alt"></i> Reset</button>
                 </div>
             </form>
         </section>
 
         <section id="resultCard" class="hidden">
-            <h2>BMI Result</h2>
+            <h2><i class="fas fa-chart-simple"></i> BMI Result</h2>
             <h3 id="resultName"></h3>
             <p><strong>BMI:</strong> <span id="resultBMI"></span></p>
             <p><strong>Category:</strong> <span id="resultCategory"></span></p>
@@ -62,7 +66,7 @@
     </main>
 
     <footer>
-        <p>Health Self-Check Kiosk</p>
+        <p>Health Self-Check Kiosk &mdash; &copy; 2026</p>
     </footer>
 
     <script src="script.js"></script>
